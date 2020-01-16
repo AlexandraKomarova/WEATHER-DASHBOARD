@@ -1,0 +1,74 @@
+body {
+    font-family: 'Krub', sans-serif;
+}
+
+.page {
+    background-image: url(moscow.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 98vw;
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px 100px 2fr 1fr 100px;
+    grid-gap: 20px;
+}
+
+.search-field {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.input-div {
+    width: 350px;
+    height: 40px;
+    position: relative;
+}
+
+.input-div i {
+    position: absolute;
+    left: 85%;
+    top: 20%;
+    
+}
+
+/* .icon {
+    margin-left: 70%;
+} */
+
+#input-field {
+    width: 320px;
+    height: 40px;
+    background-color: transparent;
+    font-size: 23px;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding-left: 15px;
+    display: block;
+    margin: auto;
+    color: white;
+    font-family: 'Krub', sans-serif;
+}
+
+#input-field:focus {
+    outline:none;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.weather-card {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4; 
+}
+
+.five-days-cards-div {
+    grid-column: 2 / 3;
+    grid-row: 4 / 4; 
+}
