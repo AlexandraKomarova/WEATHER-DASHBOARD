@@ -91,13 +91,18 @@ body {
 
 #city {
     font-size: 25px;
-    
 }
+
+#country {
+    font-size: 20px;
+}
+
 
 .city {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin: auto;
+    text-align: center;
 }
 
 .date {
