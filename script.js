@@ -47,17 +47,46 @@ $("#submit").on("click", function(event) {
             method: "GET"
         })
         .then(function(response) {
+            console.log(response)
             for (var i = 0; i < response.list.length; i+=8) {
-                console.log(response.list[i].main.temp)
                 var futureTemp = response.list[i].main.temp
                 console.log(futureTemp)
+                var description = response.list[i].weather[0].description
+                console.log(description)
+                $(".five-days-cards-div").append(`<div class="day">
+                <div class="5days-date">
+                <span class="5days-month">1</span> /<span class="5days-day">17</span> /<span class="5days-year">2020</span>
+                </div>
+                <div class="5days-temp-div">Temp: <span class="5days-temp">${futureTemp} °F<span></div>
+                <div>${description}</div>
+              </div>
+                `)
                 
               }
-
+              
+              
             
         });   
     });    
   });
+
+//   var fiveDays = [];
+//   fiveDays.push(futureTemp)
+//   console.log(fiveDays)
+
+//   for(var i = 0; i < fiveDays.length; i++){
+//     $(".5days-date").each(function(){
+    
+//         $(this).append(`<div class="5days-temp-div">Temp: <span class="5days-temp">${fiveDays[i]} °F<span></div>
+//         `)
+//     });
+  
+//   }
+
+//   for(var i = 0; i < fiveDays.length; i++){
+            //   $(".5days-date").append(`<div class="5days-temp-div">Temp: <span class="5days-temp">${fiveDays[i]} °F<span></div>
+            //     `)
+            //   }
 
 //   $(".5days-temp").text(futureTemp)
 
