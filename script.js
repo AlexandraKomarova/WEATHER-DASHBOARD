@@ -47,21 +47,40 @@ $("#submit").on("click", function(event) {
             method: "GET"
         })
         .then(function(response) {
-            var fiveDays = [];
-            for(var i = 0; i < response.list.length; i+=8){
+            for (var i = 0; i < response.list.length; i+=8) {
+                console.log(response.list[i].main.temp)
                 var futureTemp = response.list[i].main.temp
                 console.log(futureTemp)
-                fiveDays.push(futureTemp)
+                
+              }
 
-                // $(".5days-temp").empty();
+            
+        });   
+    });    
+  });
+
+//   $(".5days-temp").text(futureTemp)
+
+  // $(".day").append(`<div>
+                // ${response.list[i].main.temp}
+                // </div>
+                // `)
+
+                // var futureTemp = response.list[i].main.temp
+                // console.log(futureTemp)
+                // fiveDays.push(futureTemp)
+
+                
                 // $(".5days-temp").append(futureTemp)
                 
-                // $(".5days-temp-div").each(function(){
-                //     console.log(futureTemp)
-                //     $(this).children(".5days-temp").text(futureTemp)
-                // });
+                
                 // $(".5days-temp").text(futureTemp)
-            }
+
+            // $(".5days-temp").empty();
+            // $(".5days-temp-div").each(function(){
+                
+            //     $(this).children(".5days-temp").text(futureTemp)
+            // });
             // console.log(fiveDays)
             // for(var i = 0; i < fiveDays.length; i++){
             //     // $(".5days-temp").text(fiveDays[i])
@@ -69,11 +88,6 @@ $("#submit").on("click", function(event) {
             //     $(".5days-temp").empty();
             //     $(".5days-temp").text(fiveDays[1])
 
-                // $(".5days-temp-div").each(function(){
-                //     $(this).children(".5days-temp").text(fiveDays[i])
-                // });
+                
             // }
-        });   
-    });    
-  });
 
